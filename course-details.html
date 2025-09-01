@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">CodeCrush - Course Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .btn-special {
+            background-color: #537D5D;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-special:hover {
+            background-color: #436449;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        body {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+        
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <span class="text-2xl font-bold text-[#537D5D]">CodeCrush</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Home</a>
+                <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">About</a>
+                <a href="courses.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Courses</a>
+                <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Contact</a>
+                <a href="profile.html" class="flex items-center justify-center p-2 rounded-full hover:bg-gray-700 transition duration-300">
+                    <svg class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A11.954 11.954 0 0112 15c2.98 0 5.71-.97 7.879-2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 min-h-screen">
+        <!-- Main Course Hero Section -->
+        <section class="bg-gray-800 p-8 rounded-lg shadow-lg mb-8">
+            <div class="md:flex md:space-x-8">
+                <div class="md:w-2/3">
+                    <h1 id="course-title" class="text-4xl font-bold text-[#537D5D] mb-4"></h1>
+                    <p id="course-tagline" class="text-xl text-gray-400 mb-4"></p>
+                    <p id="course-description" class="text-gray-400 leading-relaxed mb-6"></p>
+                    <div class="flex items-center space-x-4 mb-4">
+                        <span id="course-rating" class="text-lg font-bold text-[#7DA385]"></span>
+                        <span id="course-students" class="text-gray-500"></span>
+                    </div>
+                    <div class="flex space-x-4 mb-6">
+                        <span id="course-difficulty" class="bg-gray-700 text-gray-200 text-sm py-1 px-3 rounded-full"></span>
+                        <span id="course-duration" class="bg-gray-700 text-gray-200 text-sm py-1 px-3 rounded-full"></span>
+                    </div>
+                </div>
+                <div class="md:w-1/3 mt-6 md:mt-0">
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                        <img id="course-image" src="" alt="Course Thumbnail" class="rounded-lg mb-4 w-full">
+                        <h3 class="text-2xl font-bold text-[#7DA385] mb-2">$99.99</h3>
+                        <button id="enroll-btn" class="btn-special w-full">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What You'll Learn Section -->
+        <section class="bg-gray-800 p-8 rounded-lg shadow-lg mb-8">
+            <h2 class="text-3xl font-bold text-[#537D5D] mb-6">What you'll learn</h2>
+            <ul id="learn-list" class="grid sm:grid-cols-2 gap-4 list-none"></ul>
+        </section>
+
+        <!-- Course Content Section -->
+        <section class="bg-gray-800 p-8 rounded-lg shadow-lg mb-8">
+            <h2 class="text-3xl font-bold text-[#537D5D] mb-6">Course content</h2>
+            <div id="content-list" class="space-y-4"></div>
+        </section>
+
+        <!-- Requirements Section -->
+        <section class="bg-gray-800 p-8 rounded-lg shadow-lg mb-8">
+            <h2 class="text-3xl font-bold text-[#537D5D] mb-6">Requirements</h2>
+            <ul id="requirements-list" class="list-none"></ul>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-center p-6 mt-12">
+        <p>&copy; 2025 CodeCrush. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const courseData = {
+            "html-css": {
+                title: "HTML & CSS Essentials",
+                tagline: "The absolute guide to building beautiful, responsive websites.",
+                description: "Master the building blocks of the web. This course takes you from a complete beginner to a confident front-end developer, teaching you to create beautiful and responsive websites from scratch.",
+                image: "Thumbnail/HTML.png",
+                rating: "4.7",
+                students: "12,500 students",
+                difficulty: "Beginner",
+                duration: "15 hours",
+                learn: [
+                    "Build professional, responsive websites with HTML5 and CSS3.",
+                    "Master Flexbox and CSS Grid for modern layouts.",
+                    "Understand responsive design principles for all screen sizes.",
+                    "Use CSS variables, animations, and transitions for stunning effects.",
+                    "Deploy your website to the web for free."
+                ],
+                content: [
+                    { title: "Module 1: The Foundations of HTML", lectures: 5 },
+                    { title: "Module 2: Styling with CSS", lectures: 8 },
+                    { title: "Module 3: Advanced Layouts (Flexbox & Grid)", lectures: 6 },
+                    { title: "Module 4: Responsive Design", lectures: 4 },
+                    { title: "Module 5: Project & Final Deployment", lectures: 3 }
+                ],
+                requirements: [
+                    "A computer with a text editor (like VS Code).",
+                    "No prior coding experience is required."
+                ]
+            },
+            "python": {
+                title: "Python for Beginners",
+                tagline: "Go from zero to hero in the world's most popular programming language.",
+                description: "This comprehensive introduction to Python covers all the core concepts you need to start your journey in web development, data science, machine learning, and automation. Build practical projects and master the fundamentals of programming.",
+                image: "Thumbnail/PYTHON.png",
+                rating: "4.9",
+                students: "25,000 students",
+                difficulty: "Beginner",
+                duration: "25 hours",
+                learn: [
+                    "Write clean, efficient Python code.",
+                    "Work with data types, variables, and loops.",
+                    "Create your own functions and work with modules.",
+                    "Build a simple command-line application.",
+                    "Understand object-oriented programming concepts."
+                ],
+                content: [
+                    { title: "Module 1: Python Fundamentals", lectures: 10 },
+                    { title: "Module 2: Data Structures & Functions", lectures: 8 },
+                    { title: "Module 3: Object-Oriented Programming", lectures: 7 },
+                    { title: "Module 4: File Handling & Modules", lectures: 5 },
+                    { title: "Module 5: Final Project", lectures: 4 }
+                ],
+                requirements: [
+                    "A computer with Python installed.",
+                    "No prior coding experience is required."
+                ]
+            },
+            "react": {
+                title: "React JS Masterclass",
+                tagline: "Build dynamic and scalable web applications with React from scratch.",
+                description: "Dive deep into the most popular JavaScript library for building modern web applications. This course covers everything from component-based architecture and state management to hooks, routing, and deployment.",
+                image: "Thumbnail/REACT.png",
+                rating: "4.8",
+                students: "18,000 students",
+                difficulty: "Intermediate",
+                duration: "40 hours",
+                learn: [
+                    "Build single-page applications with React.",
+                    "Master React Hooks (useState, useEffect, useContext).",
+                    "Manage application state with context and Redux.",
+                    "Use React Router to handle navigation.",
+                    "Fetch data from APIs and build dynamic UIs."
+                ],
+                content: [
+                    { title: "Module 1: React Fundamentals & JSX", lectures: 6 },
+                    { title: "Module 2: State, Props, and Events", lectures: 8 },
+                    { title: "Module 3: React Hooks Deep Dive", lectures: 10 },
+                    { title: "Module 4: Advanced Concepts & Routing", lectures: 7 },
+                    { title: "Module 5: Final Portfolio Project", lectures: 5 }
+                ],
+                requirements: [
+                    "Basic knowledge of HTML, CSS, and JavaScript.",
+                    "A computer with Node.js and npm installed."
+                ]
+            },
+            "java": {
+                title: "Java Programming",
+                tagline: "A complete guide to Java, from core concepts to building enterprise-level applications.",
+                description: "This comprehensive course is perfect for students looking to master Java for software development, enterprise solutions, or Android app creation. We cover everything from foundational syntax to advanced object-oriented design patterns.",
+                image: "Thumbnail/JAVA.png",
+                rating: "4.6",
+                students: "15,000 students",
+                difficulty: "Intermediate",
+                duration: "30 hours",
+                learn: [
+                    "Understand the core principles of Java syntax and semantics.",
+                    "Master object-oriented programming (OOP) concepts like inheritance and polymorphism.",
+                    "Build robust applications using Java collections and frameworks.",
+                    "Work with databases using JDBC.",
+                    "Develop and debug Java applications using an IDE like IntelliJ or Eclipse."
+                ],
+                content: [
+                    { title: "Module 1: Java Core & Syntax", lectures: 8 },
+                    { title: "Module 2: Object-Oriented Programming", lectures: 10 },
+                    { title: "Module 3: Collections and APIs", lectures: 7 },
+                    { title: "Module 4: Exception Handling & File I/O", lectures: 5 },
+                    { title: "Module 5: Database Connectivity", lectures: 4 }
+                ],
+                requirements: [
+                    "A computer with Java Development Kit (JDK) installed.",
+                    "Basic programming concepts are recommended."
+                ]
+            },
+            "javascript": {
+                title: "JavaScript Deep Dive",
+                tagline: "Go beyond the basics and master modern JavaScript development.",
+                description: "This course is for developers who want to move past the fundamentals of JavaScript. We explore advanced topics like asynchronous programming, ES6+ features, and modern development patterns to help you build powerful, dynamic web applications.",
+                image: "Thumbnail/JS.png",
+                rating: "4.8",
+                students: "22,000 students",
+                difficulty: "Full-Stack",
+                duration: "35 hours",
+                learn: [
+                    "Master async/await, Promises, and callbacks.",
+                    "Understand the Event Loop and asynchronous behavior.",
+                    "Learn new ES6+ features like arrow functions and destructuring.",
+                    "Work with modules and advanced data structures.",
+                    "Build complex, interactive user interfaces from scratch."
+                ],
+                content: [
+                    { title: "Module 1: Advanced Syntax & ES6+", lectures: 7 },
+                    { title: "Module 2: Asynchronous JavaScript", lectures: 9 },
+                    { title: "Module 3: DOM Manipulation & Events", lectures: 6 },
+                    { title: "Module 4: Functional Programming Concepts", lectures: 5 },
+                    { title: "Module 5: Project Building", lectures: 8 }
+                ],
+                requirements: [
+                    "Basic understanding of HTML, CSS, and JavaScript basics.",
+                    "A computer with a web browser and text editor."
+                ]
+            },
+            "php-laravel": {
+                title: "PHP & Laravel",
+                tagline: "Develop robust back-end systems with the power of PHP and Laravel.",
+                description: "This course is your complete guide to building professional, secure back-end systems. You'll master PHP, learn the MVC architecture with the Laravel framework, and build a fully functional web application.",
+                image: "Thumbnail/PHP.png",
+                rating: "4.7",
+                students: "10,000 students",
+                difficulty: "Full-Stack",
+                duration: "20 hours",
+                learn: [
+                    "Understand PHP syntax and its role in web development.",
+                    "Set up a local development environment with Composer.",
+                    "Master Laravel's MVC architecture and routing.",
+                    "Work with databases using Eloquent ORM and migrations.",
+                    "Build secure APIs and handle user authentication."
+                ],
+                content: [
+                    { title: "Module 1: PHP Fundamentals", lectures: 6 },
+                    { title: "Module 2: Introduction to Laravel", lectures: 8 },
+                    { title: "Module 3: Databases & Eloquent ORM", lectures: 7 },
+                    { title: "Module 4: Routing & Controllers", lectures: 5 },
+                    { title: "Module 5: User Authentication & Final Project", lectures: 4 }
+                ],
+                requirements: [
+                    "Basic knowledge of HTML, CSS, and a desire to learn back-end development.",
+                    "A computer with a local server environment (e.g., XAMPP, Laragon)."
+                ]
+            }
+        };
+
+        // Function to parse URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            const results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
+
+        // Get course ID from URL
+        const courseId = getUrlParameter('course');
+        const course = courseData[courseId];
+
+        if (course) {
+            // Populate the page with course data
+            document.getElementById('page-title').textContent = `CodeCrush - ${course.title}`;
+            document.getElementById('course-title').textContent = course.title;
+            document.getElementById('course-tagline').textContent = course.tagline;
+            document.getElementById('course-description').textContent = course.description;
+            document.getElementById('course-image').src = course.image;
+            document.getElementById('course-rating').textContent = `★ ${course.rating}`;
+            document.getElementById('course-students').textContent = `(${course.students})`;
+            document.getElementById('course-difficulty').textContent = course.difficulty;
+            document.getElementById('course-duration').textContent = course.duration;
+
+            // Populate what you'll learn list
+            const learnList = document.getElementById('learn-list');
+            course.learn.forEach(item => {
+                const li = document.createElement('li');
+                li.className = "flex items-start mb-2";
+                li.innerHTML = `<svg class="h-6 w-6 text-[#537D5D] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="text-gray-400">${item}</span>`;
+                learnList.appendChild(li);
+            });
+
+            // Populate course content list
+            const contentList = document.getElementById('content-list');
+            course.content.forEach(module => {
+                const moduleDiv = document.createElement('div');
+                moduleDiv.className = "bg-gray-700 p-4 rounded-lg shadow-md";
+                moduleDiv.innerHTML = `<h3 class="text-xl font-semibold text-gray-200">${module.title}</h3><p class="text-gray-400 text-sm mt-1">${module.lectures} lectures</p>`;
+                contentList.appendChild(moduleDiv);
+            });
+
+            // Populate requirements list
+            const requirementsList = document.getElementById('requirements-list');
+            course.requirements.forEach(req => {
+                const li = document.createElement('li');
+                li.className = "flex items-start mb-2";
+                li.innerHTML = `<svg class="h-6 w-6 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A11.954 11.954 0 0112 15c2.98 0 5.71-.97 7.879-2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg><span class="text-gray-400">${req}</span>`;
+                requirementsList.appendChild(li);
+            });
+
+            // Purchase Button Logic
+            document.getElementById('enroll-btn').addEventListener('click', () => {
+                alert(`You have successfully enrolled in the ${course.title} course!`);
+            });
+        }
+    </script>
+</body>
+</html>

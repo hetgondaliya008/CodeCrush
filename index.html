@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCrush - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .btn-special {
+            background-color: #537D5D;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-special:hover {
+            background-color: #436449;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        body {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <span class="text-2xl font-bold text-[#537D5D]">CodeCrush</span>
+            </div>
+            <div class="space-x-4 flex items-center">
+                <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Home</a>
+                <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">About</a>
+                <a href="courses.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Courses</a>
+                <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Contact</a>
+                <a href="profile.html" class="flex items-center justify-center p-2 rounded-full hover:bg-gray-700 transition duration-300">
+                    <svg class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A11.954 11.954 0 0112 15c2.98 0 5.71-.97 7.879-2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 min-h-screen">
+        <section id="hero" class="text-center py-12">
+            <h1 class="text-5xl font-extrabold text-[#537D5D] animate-fade-in-down">Welcome to CodeCrush!</h1>
+            <p class="mt-4 text-xl text-gray-400 animate-fade-in-up">Your journey into the world of programming starts here. Master the art of code with our expert-led courses.</p>
+            <a href="courses.html" class="btn-special mt-8 inline-block animate-pulse">Explore Courses</a>
+            
+        </section>
+
+        <section id="what-we-offer" class="py-12">
+            <h2 class="text-4xl font-bold text-center text-[#537D5D] mb-8">What We Offer</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-effect">
+                    <svg class="h-12 w-12 text-[#7DA385] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.485 9.166 5 7.5 5S4.168 5.485 3 6.253v13C4.168 18.485 5.832 18 7.5 18s3.332.485 4.5 1.253m0-13C13.168 5.485 14.832 5 16.5 5S19.832 5.485 21 6.253v13C19.832 18.485 18.168 18 16.5 18S13.168 18.485 12 19.253"></path></svg>
+                    <h3 class="text-xl font-bold text-[#7DA385] mb-2">Expert Tutors</h3>
+                    <p class="text-gray-400">Learn from industry professionals with years of experience.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-effect">
+                    <svg class="h-12 w-12 text-[#7DA385] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    <h3 class="text-xl font-bold text-[#7DA385] mb-2">Project-Based Learning</h3>
+                    <p class="text-gray-400">Build a professional portfolio with hands-on projects and real-world applications.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-effect">
+                    <svg class="h-12 w-12 text-[#7DA385] mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <h3 class="text-xl font-bold text-[#7DA385] mb-2">Lifetime Access</h3>
+                    <p class="text-gray-400">Get unlimited access to all course materials and updates.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="info" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 py-12">
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-effect">
+                <img src="Photo/Learn a New Language.png" alt="Coding Image 1" class="rounded-lg mb-4 object-cover">
+                <h2 class="text-2xl font-bold text-[#7DA385]">Learn a New Language</h2>
+                <p class="mt-2 text-gray-400">Dive into the syntax and semantics of a new programming language. From Python to JavaScript, we've got you covered.</p>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-effect">
+                <img src="Photo/Build Real-World Projects.png" alt="Coding Image 2" class="rounded-lg mb-4 object-cover h-48 w-full">
+                <h2 class="text-2xl font-bold text-[#7DA385]">Build Real-World Projects</h2>
+                <p class="mt-2 text-gray-400">Apply your knowledge by building practical applications. Our courses focus on hands-on, project-based learning.</p>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-effect">
+                <img src="Photo/Join a Thriving Community.png" alt="Coding Image 3" class="rounded-lg mb-4 object-cover h-48 w-full">
+                <h2 class="text-2xl font-bold text-[#7DA385]">Join a Thriving Community</h2>
+                <p class="mt-2 text-gray-400">Connect with fellow coders, ask questions, and collaborate on projects in our active community forums.</p>
+            </div>
+        </section>
+        <section id="testimonials" class="py-12">
+            <h2 class="text-4xl font-bold text-center text-[#537D5D] mb-8">What Our Students Say</h2>
+            <div class="relative max-w-2xl mx-auto overflow-hidden">
+                <div id="testimonial-carousel" class="flex transition-transform duration-500 ease-in-out">
+                    <div class="flex-shrink-0 w-full p-6 text-center">
+                        <p class="text-xl italic text-gray-400">"ByteForge's courses are incredibly well-structured and easy to follow. I went from a complete beginner to a confident coder in just a few months!"</p>
+                        <p class="mt-4 font-semibold text-gray-300">- Jessica L.</p>
+                    </div>
+                    <div class="flex-shrink-0 w-full p-6 text-center">
+                        <p class="text-xl italic text-gray-400">"The hands-on projects are what made the difference for me. I was able to build a portfolio and land my first developer job. Highly recommend!"</p>
+                        <p class="mt-4 font-semibold text-gray-300">- Mark S.</p>
+                    </div>
+                    <div class="flex-shrink-0 w-full p-6 text-center">
+                        <p class="text-xl italic text-gray-400">"The community is amazing! I always get quick and helpful responses whenever I'm stuck. It feels like a real family."</p>
+                        <p class="mt-4 font-semibold text-gray-300">- Sarah P.</p>
+                    </div>
+                </div>
+                <button id="prev-btn" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-700 p-2 rounded-full text-white hover:bg-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <button id="next-btn" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 p-2 rounded-full text-white hover:bg-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </section>
+        <section id="cta" class="bg-gray-800 text-center py-16 rounded-lg shadow-lg">
+            <h2 class="text-4xl font-bold text-[#537D5D] mb-4">Ready to Start Your Journey?</h2>
+            <p class="text-gray-400 mb-8">Join thousands of students and launch your coding career with ByteForge.</p>
+            <a href="signup.html" class="btn-special animate-bounce">Sign Up Now</a>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-center p-6 mt-12">
+        <p>&copy; 2025 CodeCrush. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const carousel = document.getElementById('testimonial-carousel');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        let currentPosition = 0;
+        const totalItems = carousel.children.length;
+
+        nextBtn.addEventListener('click', () => {
+            currentPosition = (currentPosition + 1) % totalItems;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentPosition = (currentPosition - 1 + totalItems) % totalItems;
+            updateCarousel();
+        });
+
+        function updateCarousel() {
+            const offset = -currentPosition * 100;
+            carousel.style.transform = `translateX(${offset}%)`;
+        }
+
+        // Auto-scroll functionality
+        setInterval(() => {
+            currentPosition = (currentPosition + 1) % totalItems;
+            updateCarousel();
+        }, 5000);
+    </script>
+</body>
+</html>

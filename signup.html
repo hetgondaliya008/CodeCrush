@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCrush - Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .btn-special {
+            background-color: #537D5D;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-special:hover {
+            background-color: #436449;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .logo-hover:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(83, 125, 93, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(83, 125, 93, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(83, 125, 93, 0); }
+        }
+        body {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <span class="text-2xl font-bold text-[#537D5D]">CodeCrush</span>
+            </div>
+            <div class="space-x-4 flex items-center">
+                <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Home</a>
+                <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">About</a>
+                <a href="courses.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Courses</a>
+                <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Contact</a>
+                <a href="profile.html" class="flex items-center justify-center p-2 rounded-full bg-gray-700 transition duration-300">
+                    <svg class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A11.954 11.954 0 0112 15c2.98 0 5.71-.97 7.879-2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 min-h-screen flex flex-col items-center justify-center">
+        <div class="w-full max-w-lg bg-gray-800 p-8 rounded-lg shadow-lg">
+            <h1 class="text-3xl font-bold text-center text-[#537D5D] mb-6">Sign Up for an Account</h1>
+            <div class="mb-6 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1516321497487-e288fb197133" alt="Special coding image" class="rounded-lg max-h-48">
+            </div>
+            <form class="space-y-4">
+                <input type="text" placeholder="Full Name" class="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:outline-none focus:border-[#537D5D] transition-colors">
+                <input type="text" placeholder="Username" class="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:outline-none focus:border-[#537D5D] transition-colors">
+                <input type="email" placeholder="Email Address" class="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:outline-none focus:border-[#537D5D] transition-colors">
+                <input type="password" placeholder="Password" class="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:outline-none focus:border-[#537D5D] transition-colors">
+                <input type="tel" placeholder="Contact Information" class="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:outline-none focus:border-[#537D5D] transition-colors">
+                <input type="date" placeholder="Date of Birth" class="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:outline-none focus:border-[#537D5D] transition-colors text-gray-400">
+                <div class="flex items-center space-x-2">
+                    <input type="checkbox" id="terms" class="h-4 w-4 text-[#537D5D] bg-gray-700 border-gray-600 rounded">
+                    <label for="terms" class="text-sm text-gray-400">
+                        I agree to the <a href="#" class="text-[#537D5D] hover:underline">Terms of Use</a> and <a href="#" class="text-[#537D5D] hover:underline">Privacy Policy</a>
+                    </label>
+                </div>
+                <button type="submit" class="w-full btn-special">Sign Uo and Go</button>
+            </form>
+            <p class="mt-6 text-center text-gray-400">
+                Already have an account? <a href="login.html" class="text-[#537D5D] hover:underline">Log in here</a>
+            </p>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-center p-6 mt-12">
+        <p>&copy; 2025 CodeCrush. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

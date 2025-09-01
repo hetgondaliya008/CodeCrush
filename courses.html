@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCrush - Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .btn-special {
+            background-color: #537D5D;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-special:hover {
+            background-color: #436449;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .logo-hover:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(83, 125, 93, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(83, 125, 93, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(83, 125, 93, 0); }
+        }
+        body {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <span class="text-2xl font-bold text-[#537D5D]">CodeCrush</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Home</a>
+                <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">About</a>
+                <a href="courses.html" class="px-3 py-2 rounded-md text-sm font-medium bg-gray-700 transition duration-300">Courses</a>
+                <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 transition duration-300">Contact</a>
+                <a href="profile.html" class="flex items-center justify-center p-2 rounded-full hover:bg-gray-700 transition duration-300">
+                    <svg class="h-6 w-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A11.954 11.954 0 0112 15c2.98 0 5.71-.97 7.879-2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </a>
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Search..." class="bg-gray-700 text-gray-300 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-[#537D5D]">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 min-h-screen">
+        <h1 class="text-4xl font-bold text-center text-[#537D5D] mb-8">Our Courses</h1>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Course Card 1 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+                <img src="Photo/PYTHON.png" alt="Coding Image 2" class="rounded-lg mb-4 object-cover h-50 w-full">
+                <h2 class="text-2xl font-bold text-[#7DA385]">Python for Beginners</h2><br>
+                <span class="text-sm font-semibold bg-gray-500 text-white py-1 px-3 rounded-full">Full-Stack</span>
+                <p class="mt-2 text-gray-400">A comprehensive introduction to Python. Master core concepts like data types, control flow, and functions to start your journey in web development or data science.</p><br>
+                <a href="course-details.html?course=python" class="btn-special mt-4 w-full text-center">View Details</a>
+            </div>
+
+            <!-- Course Card 2 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+                <img src="Photo/REACT.png" alt="Coding Image 2" class="rounded-lg mb-4 object-cover h-50 w-full">
+                <h2 class="text-2xl font-bold text-[#7DA385]">React JS Masterclass</h2><br>
+                <span class="text-sm font-semibold bg-gray-500 text-white py-1 px-3 rounded-full">Full-Stack</span>
+                <p class="mt-2 text-gray-400">Build modern, scalable web applications with React. Dive deep into components, state management, and hooks with hands-on projects.</p><br>
+                <a href="course-details.html?course=react" class="btn-special mt-4 w-full text-center">View Details</a>
+            </div>
+
+            <!-- Course Card 3 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+                <img src="Photo/HTML.png" alt="Coding Image 2" class="rounded-lg mb-4 object-cover h-50 w-full">
+                <h2 class="text-2xl font-bold text-[#7DA385]">HTML & CSS Essentials</h2><br>
+                <span class="text-sm font-semibold bg-gray-500 text-white py-1 px-3 rounded-full">Full-Stack</span>
+                <p class="mt-2 text-gray-400">Master the building blocks of the web. Learn to create beautiful, responsive websites from scratch, focusing on modern layouts like Flexbox and Grid.</p><br>
+                <a href="course-details.html?course=html-css" class="btn-special mt-4 w-full text-center">View Details</a>
+            </div>
+
+            <!-- Course Card 4 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+                <img src="Photo/JAVA.png" alt="Coding Image 2" class="rounded-lg mb-4 object-cover h-50 w-full">
+                <h2 class="text-2xl font-bold text-[#7DA385]">Java Programming</h2><br>
+                <span class="text-sm font-semibold bg-gray-500 text-white py-1 px-3 rounded-full">Full-Stack</span>
+                <p class="mt-2 text-gray-400">A comprehensive guide to Java, from core concepts to building enterprise-level applications. Perfect for software development and Android app creation.</p><br>
+                <a href="course-details.html?course=java" class="btn-special mt-4 w-full text-center">View Details</a>
+            </div>
+
+            <!-- Course Card 5 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+                <img src="Photo/JS.png" alt="Coding Image 2" class="rounded-lg mb-4 object-cover h-50 w-full">
+                <h2 class="text-2xl font-bold text-[#7DA385]">JavaScript Deep Dive</h2><br>
+                <span class="text-sm font-semibold bg-gray-500 text-white py-1 px-3 rounded-full">Full-Stack</span>
+                <p class="mt-2 text-gray-400">Go beyond the basics of JavaScript. Explore asynchronous programming, ES6+, and advanced techniques to build dynamic web applications.</p><br>
+                <a href="course-details.html?course=javascript" class="btn-special mt-4 w-full text-center">View Details</a>
+            </div>
+
+            <!-- Course Card 6 -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+                <img src="Photo/PHP.png" alt="Coding Image 2" class="rounded-lg mb-4 object-cover h-50 w-full">
+                <h2 class="text-2xl font-bold text-[#7DA385]">PHP & Laravel</h2><br>
+                <span class="text-sm font-semibold bg-gray-500 text-white py-1 px-3 rounded-full">Full-Stack</span>
+                <p class="mt-2 text-gray-400">Develop robust back-end systems with PHP and the Laravel framework. Learn about MVC architecture, database migrations, and building secure APIs.</p><br>
+                <a href="course-details.html?course=php-laravel" class="btn-special mt-4 w-full text-center">View Details</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-center p-6 mt-12">
+        <p>&copy; 2025 CodeCrush. All rights reserved.</p>
+    </footer>
+
+        <script>
+        document.querySelectorAll('.purchase-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Thank you for your purchase! A confirmation has been sent to your email.');
+            });
+        });
+        
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const courseCards = document.querySelectorAll('.course-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.dataset.category;
+
+                courseCards.forEach(card => {
+                    const cardCategory = card.dataset.category;
+                    if (category === 'all' || cardCategory.includes(category)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
